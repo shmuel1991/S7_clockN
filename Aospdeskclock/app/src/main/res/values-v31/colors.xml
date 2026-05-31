@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2024 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<!-- Light-theme Material You dynamic color on Android 12+ (API 31). These map the app's
+     md_* / content tokens to the wallpaper-derived @android:color/system_* palette so every
+     static reference becomes dynamic automatically. -->
+<resources>
+    <color name="md_accent">@android:color/system_accent1_600</color>
+    <color name="md_primary">@android:color/system_accent1_600</color>
+    <color name="md_primary_dark">@android:color/system_accent1_700</color>
+    <color name="md_background">@android:color/system_neutral1_10</color>
+    <color name="md_surface">@android:color/system_neutral1_50</color>
+    <color name="md_on_surface">@android:color/system_neutral1_900</color>
+    <color name="md_focus_stroke">@android:color/system_accent1_600</color>
+
+    <color name="md_on_primary">@android:color/system_accent1_0</color>
+    <color name="md_outline">@android:color/system_neutral2_500</color>
+    <color name="md_surface_variant">@android:color/system_neutral2_100</color>
+
+    <color name="text_primary">@android:color/system_neutral1_900</color>
+    <color name="text_secondary">@android:color/system_neutral2_700</color>
+    <color name="icon_tint">@android:color/system_neutral1_900</color>
+</resources>

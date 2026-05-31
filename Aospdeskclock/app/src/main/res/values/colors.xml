@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="black_87p">#DE000000</color>
+    <color name="black_54p">#8A000000</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <!-- The following tokens are theme-adaptive: values here are tuned for the
+         LIGHT theme (dark content on a light surface) and are overridden in
+         values-night for dark mode so text/icons keep correct contrast. -->
+    <color name="white_08p">#0A000000</color>
+    <color name="white_63p">#99000000</color>
+    <color name="no_alarms">#61000000</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="hairline">#1F000000</color>
+
+    <color name="clock_gray">#B3000000</color>
+
+    <color name="default_background">#FEF7FF</color>
+
+    <!-- Adaptive primary/secondary content colors (text & icons). Light values
+         here; dark values in values-night/colors.xml. -->
+    <color name="text_primary">#DE000000</color>
+    <color name="text_secondary">#99000000</color>
+    <color name="icon_tint">#DE000000</color>
+
+    <!-- Material 3 (Material You) baseline palette - light theme defaults.
+         Overridden by values-night for dark mode and by values-v31 /
+         values-night-v31 for wallpaper-based dynamic color on Android 12+. -->
+    <color name="md_accent">#6750A4</color>
+    <color name="md_primary">#6750A4</color>
+    <color name="md_primary_dark">#21005D</color>
+    <color name="md_background">#FEF7FF</color>
+    <color name="md_surface">#F3EDF7</color>
+    <color name="md_on_surface">#1D1B20</color>
+    <color name="md_focus_highlight">#1F6750A4</color>
+    <color name="md_focus_stroke">#6750A4</color>
+
+    <!-- Material 3 switch tokens (light). -->
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_outline">#79747E</color>
+    <color name="md_surface_variant">#E7E0EC</color>
+
+    <!-- shadowColor for widget text -->
+    <color name="widget_shadow_color">#67000000</color>
+</resources>

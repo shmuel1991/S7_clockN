@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+// Auto-incrementing version. The version code/name are stored in version.properties and bumped
+// on every build (the patch component of the name is increased to match the code).
+def versionPropsFile = file('version.properties')
+def versionProps = new Properties()
+if (versionPropsFile.exists()) {
+    versionPropsFile.withInputStream { versionProps.load(it) }
+}
+def computedVersionCode = (versionProps['versionCode'] ?: '1').toString().toInteger() + 1
+def baseName = (versionProps['versionName'] ?: '1.0.0').toString()
+def nameParts = baseName.tokenize('.')
+while (nameParts.size() < 3) {
+    nameParts.add('0')
+}
+nameParts[2] = (nameParts[2].toInteger() + 1).toString()
+def computedVersionName = nameParts.join('.')
+// Persist the bumped values for the next build.
+versionProps['versionCode'] = computedVersionCode.toString()
+versionProps['versionName'] = computedVersionName
+versionPropsFile.withWriter { versionProps.store(it, null) }
+
+android {
+    namespace 'com.chen.deskclock'
+    compileSdkVersion 34
+    buildFeatures {
+        buildConfig true
+    }
+    defaultConfig {
+        applicationId "com.chen.deskclock"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode computedVersionCode
+        versionName computedVersionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
+    implementation 'androidx.preference:preference:1.2.1'
+    implementation 'com.google.android.material:material:1.11.0'
+}

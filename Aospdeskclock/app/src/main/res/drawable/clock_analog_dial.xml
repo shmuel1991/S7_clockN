@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2024 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Android 13 style analog dial: a thin outer ring plus rounded hour tick dots
+     (larger at 12/3/6/9). Tinted with the theme's primary text color so it adapts
+     to light/dark and dynamic-color themes. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="@dimen/analog_clock_size"
+        android:height="@dimen/analog_clock_size"
+        android:viewportHeight="1176.0"
+        android:viewportWidth="1176.0"
+        android:tint="?android:attr/textColorPrimary">
+
+    <!-- Thin outer ring. -->
+    <path
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="8"
+        android:strokeAlpha="0.35"
+        android:fillColor="#00000000"
+        android:pathData="M78,588 a510,510 0 1,0 1020,0 a510,510 0 1,0 -1020,0 Z" />
+
+    <!-- Major ticks at 12, 3, 6, 9. -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M566,88 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0 Z
+                          M1066,588 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0 Z
+                          M566,1088 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0 Z
+                          M66,588 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0 Z" />
+
+    <!-- Minor ticks at the remaining hours. -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillAlpha="0.6"
+        android:pathData="M826,155 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 Z
+                          M1009,338 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 Z
+                          M1009,838 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 Z
+                          M826,1021 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 Z
+                          M326,1021 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 Z
+                          M143,838 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 Z
+                          M143,338 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 Z
+                          M326,155 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 Z" />
+</vector>

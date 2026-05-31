@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2024 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Android 13 style accent second hand with a counterweight and center cap. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="@dimen/analog_clock_size"
+        android:height="@dimen/analog_clock_size"
+        android:viewportHeight="1176.0"
+        android:viewportWidth="1176.0"
+        android:tint="?attr/colorAccent">
+    <!-- Thin hand with a short counterweight tail. -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M584,150 A4,4 0 0 1 592,150 L592,700 A4,4 0 0 1 584,700 Z" />
+    <!-- Center cap. -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M560,588 a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0 Z" />
+    <!-- Inner dot. -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M576,588 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0 Z" />
+</vector>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Material 3 switch track tint: accent when checked, surface variant when off. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/md_accent" android:state_checked="true" />
+    <item android:color="@color/md_surface_variant" />
+</selector>
